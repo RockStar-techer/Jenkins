@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <h1>nandini</h1>
+    <button id="stop">stop</button>
+    <!-- <div>
+        <ul id="images">
+            <li><img  width="200px" id="munnar" src="https://static.toiimg.com/photo/msid-85515152,width-96,height-65.cms" ></li>
+            <li> <img  width="200px" id="kodaikanal" src="https://static.toiimg.com/thumb/103284877/Kodaikanal.jpg?width=1200&height=900" alt="kodaikanal"></li>
+            <li><img  width="200px" id="swizerland"  src="https://cdn.britannica.com/65/162465-050-9CDA9BC9/Alps-Switzerland.jpg" alt="swizerland"></li>
+            <li><img  width="200px" id="Alleppey" src="https://www.akshartours.com/wp-content/uploads/2020/07/Alleppey-768x432.jpg" alt="Alleppey"></li>
+            <li><a  style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+     -->
+</body>
+<script>
+    // document.getElementById('munnar').onclick=function(){
+    //     alert("munnar clicked")
+    // }
+
+    // attachEvent()
+    // jQuery - on 
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById('munnar').addEventListener('click',function(e){
+    //     console.log("munnar clicked");
+    //     e.stopPropagatio()
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // },false)
+
+
+    // document.querySelector('#images').addEventListener('click',function(e){
+    //     console.log(e.target.tagName);
+    //     if(e.target.tagName==='IMG'){
+    //         console.log(e.target.id);
+    //         let removeIt =e.target.parentNode
+    //         removeIt.remove()
+    //     }
+    // })
+    const saynandini =function(){
+        console.log("nandini");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML="best JS series"
+    }
+    const changeMe = setTimeout(changeText,100)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+
+</script>
+</html>
